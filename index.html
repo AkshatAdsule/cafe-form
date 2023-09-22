@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Form</title>
+
+    <link rel="stylesheet" href="prism.css" />
+    <script type="module" crossorigin src="/cafe-form/assets/index-4b6c1c82.js"></script>
+    <link rel="stylesheet" href="/cafe-form/assets/index-c79dc5b6.css">
+  </head>
+  <body>
+    <main id="app">
+      <form id="item_input_form">
+        <label for="input_item_name">Item Name</label>
+        <input type="text" name="item_name" id="input_item_name" />
+
+        <label for="input_price">Price</label>
+        <input
+          type="number"
+          step="0.01"
+          min="0"
+          name="item_price"
+          id="input_price"
+        />
+
+        <label for="input_item_type">Item Type</label>
+        <select name="item_type" id="input_item_type">
+          <option value="food">Food</option>
+          <option value="drink">Drink</option>
+          <option value="other">Other</option>
+        </select>
+
+        <button type="submit">Add Item</button>
+        <button type="button" class="remove" id="clear_button">
+          Clear All Items
+        </button>
+      </form>
+      <div id="outputs">
+        <div id="menu_list">
+          <h2>Menu List</h2>
+          <div id="menu_preview"></div>
+        </div>
+        <div id="menu_json">
+          <h2>Menu JSON</h2>
+          <pre
+            id="menu_json_text"
+            class="language-json"
+          ><code class="language-json" 
+           id="menu_json_content"></code></pre>
+        </div>
+      </div>
+    </main>
+
+    <script src="prism.js"></script>
+    
+  </body>
+</html>
